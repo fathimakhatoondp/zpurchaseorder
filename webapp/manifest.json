@@ -1,0 +1,113 @@
+{
+  "_version": "1.76.0",
+  "sap.app": {
+    "id": "com.sap.zpurchaseorder",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.19.5",
+      "toolsId": "3af425ba-62ce-4248-a8d5-8fbc83155819"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.142.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.sap.zpurchaseorder.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.sap.zpurchaseorder.view",
+        "async": true,
+        "viewPath": "com.sap.zpurchaseorder.view"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "ProductDetails",          
+          "target": "ProductDetails"
+        },
+         {
+          "pattern": "ItemDetails/{orderId}",
+          "name": "ItemDetails",          
+          "target": "ItemDetails"
+        }
+      ],
+       "targets": {
+        "ProductDetails": {
+          "viewName": "ProductDetails",
+          "viewType": "XML",
+          "transition": "fade",
+          "controlAggregation": "pages",
+          "clearControlAggregation": false,
+          "controlId": "app"
+        },
+        "ItemDetails": {
+          "viewName": "ItemDetails",
+          "viewType": "XML",
+          "transition": "fade",
+          "controlAggregation": "pages",
+          "clearControlAggregation": false,
+          "controlId": "app"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.sap.zpurchaseorder.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

@@ -1,0 +1,100 @@
+<mvc:View
+    controllerName="com.sap.zpurchaseorder.controller.ProductDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+    <Page id="page">
+        <customHeader>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Title text="PO Summary Master Detail" />
+                <ToolbarSpacer />
+            </OverflowToolbar>
+        </customHeader>
+        <content>
+            <SplitApp
+                id="splitAppId"
+                initialMaster="masterProductsPageId"
+                initialDetail="detailsProductsPageId"
+            >
+                <detailPages>
+                    <Page
+                        id="detailsProductsPageId"
+                        title="Order Details"
+                    >
+                        <Table
+                            id="orderDetailsTableId"
+                            items="{JSONModel>/FilteredOrders}"
+                        >
+                            <columns>
+                                <!-- <Column>
+                                    <Text text="Product ID" />
+                                </Column> -->
+                                <Column
+                                    minScreenWidth="Tablet"
+                                    demandPopin="true"
+                                >
+                                    <Text text="Order ID" />
+                                </Column>
+                                <Column
+                                    minScreenWidth="Tablet"
+                                    demandPopin="true"
+                                >
+                                    <Text text="Order Date" />
+                                </Column>
+                                <Column
+                                    minScreenWidth="Tablet"
+                                    demandPopin="true"
+                                >
+                                    <Text text="Order By" />
+                                </Column>
+                                <Column
+                                    minScreenWidth="Tablet"
+                                    demandPopin="true"
+                                >
+                                    <Text text="Quantity" />
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem
+                                    type="Active"
+                                    press="onPressTableRow"
+                                >
+                                    <cells>
+                                        <!-- <Text text="{JSONModel>/SelectedProductID}" /> -->
+                                        <Text text="#{JSONModel>OrderID}" />
+                                        <Text text="{JSONModel>OrderDate}" />
+                                        <Text text="{JSONModel>OrderBy}" />
+                                        <Text text="{JSONModel>Quantity}" />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </Page>
+                </detailPages>
+                <masterPages>
+                    <Page
+                        id="masterProductsPageId"
+                        title="Products Master"
+                        backgroundDesign="List"
+                    >
+                        <List
+                            id="productsListId"
+                            items="{JSONModel>/Products}"
+                            itemPress="onListPress"
+                        >
+                            <items>
+                                <StandardListItem
+                                    icon="sap-icon://product"
+                                    title="{JSONModel>Name}"
+                                    type="Navigation"
+                                />
+                            </items>
+                        </List>
+                    </Page>
+                </masterPages>
+            </SplitApp>
+        </content>
+    </Page>
+</mvc:View>

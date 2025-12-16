@@ -1,0 +1,150 @@
+<mvc:View
+    xmlns:layout="sap.ui.layout"
+    xmlns:uxap="sap.uxap"
+    controllerName="com.sap.zpurchaseorder.controller.ItemDetails"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <Page
+        showNavButton="true"
+        navButtonPress="onPressBackInItemDetails"
+    >
+        <customHeader>
+            <OverflowToolbar>
+                <!-- Redefining as custom header overrides the default navButton behaviour -->
+                <Button
+                    type="Back"
+                    press="onPressBackInItemDetails"
+                />
+                <ToolbarSpacer />
+                <Title text="Order Summary" />
+                <ToolbarSpacer />
+            </OverflowToolbar>
+        </customHeader>
+        <content>
+            <uxap:ObjectPageLayout id="objectPageLayoutID">
+                <uxap:headerTitle>
+                    <uxap:ObjectPageDynamicHeaderTitle>
+                        <uxap:expandedHeading>
+                            <Title
+                                text="Order ID #{JSONModel>/SelectedOrder/OrderID}"
+                            />
+                        </uxap:expandedHeading>
+                        <uxap:expandedContent>
+                            <VBox>
+                                <Text
+                                    text="Order By : {JSONModel>/SelectedOrder/OrderBy}"
+                                />
+                            </VBox>
+                        </uxap:expandedContent>
+                        <uxap:snappedHeading>
+                            <Title
+                                text="Order ID #{JSONModel>/SelectedOrder/OrderID}"
+                            />
+                        </uxap:snappedHeading>
+                        <uxap:snappedContent>
+                            <Text
+                                text="Order By : {JSONModel>/SelectedOrder/OrderBy}"
+                            />
+                        </uxap:snappedContent>
+                        <!-- <uxap:heading>
+                        <ObjectIdentifier
+                            title="{JSONModel>/SelectedOrder/OrderID}"
+                            text="{JSONModel>/SelectedOrder/OrderBy}"
+                        />
+                        <ObjectStatus title="Order ID" text="{JSONModel>/SelectedOrder/OrderID}"></ObjectStatus>
+                    </uxap:heading> -->
+                    </uxap:ObjectPageDynamicHeaderTitle>
+                </uxap:headerTitle>
+                <uxap:headerContent>
+                    <FlexBox
+                        wrap="WrapReverse"
+                        width="100%"
+                    >
+                        <!-- <Avatar
+                            src="sap-icon://picture"
+                            backgroundColor="Random"
+                            displaySize="L"
+                            class="sapUiTinyMarginEnd"
+                        /> -->
+
+                        <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                            <ObjectStatus
+                                title="Order Date"
+                                text="{JSONModel>/SelectedOrder/OrderDate}" />
+                            <ObjectStatus
+                                title="Order Status"
+                                text="{JSONModel>/SelectedOrder/OrderStatus}" />
+                        </layout:VerticalLayout>
+
+                        <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                            <ObjectStatus
+                                title="Delivery Status"
+                                text="{JSONModel>/SelectedOrder/DeliveryStatus}"
+                            />
+                            <ObjectStatus
+                                title="Order Total"
+                                text="{JSONModel>/SelectedOrderTotal}"
+                            />
+                        </layout:VerticalLayout>
+                        <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                            <RatingIndicator
+                                maxValue="5"
+                                value="{JSONModel>/SelectedOrder/Rating}"
+                                tooltip="Rating Tooltip"
+                            />
+                        </layout:VerticalLayout>
+                    </FlexBox>
+                </uxap:headerContent>
+                <uxap:sections>
+                    <uxap:ObjectPageSection title="Products in this Order">
+                        <uxap:ObjectPageSubSection>
+                            <Table
+                                items="{JSONModel>/SelectedOrderItemsMerged}"
+                            >
+                                <columns>
+                                    <Column>
+                                        <Text text="Item No" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="Product ID" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="Name" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="Price" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="Quantity" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="Total" />
+                                    </Column>
+                                </columns>
+
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <ObjectStatus
+                                                text="{JSONModel>ItemNo}"
+                                                active="true"
+                                                state="Information"
+                                                press="onPressItemNumber"
+                                            />
+                                            <Text text="{JSONModel>ProductID}" />
+                                            <Text text="{JSONModel>Name}" />
+                                            <Text text="{JSONModel>Price}" />
+                                            <Text text="{JSONModel>Quantity}" />
+                                            <Text text="{JSONModel>Total}" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:ObjectPageSection>
+                </uxap:sections>
+            </uxap:ObjectPageLayout>
+        </content>
+    </Page>
+</mvc:View>

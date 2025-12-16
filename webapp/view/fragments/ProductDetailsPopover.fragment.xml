@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Popover
+        id="productPopover"
+        title="Product Details"
+        contentWidth="400px"
+        contentHeight="300px"
+        placement="Auto">
+
+        <VBox class="sapUiSmallMargin" renderType="Bare">      
+        <Text text="Product ID: {JSONModel>/SelectedProduct/ProductID}" />
+        <Text text="Product Name: {JSONModel>/SelectedProduct/Name}" />    
+            <Text text="Description: {JSONModel>/SelectedProduct/Description}" />
+            <Text text="Price: {JSONModel>/SelectedProduct/Price} {JSONModel>/SelectedProduct/Currency}" />
+            <Text text="Vendor ID: {JSONModel>/SelectedProduct/Vendor/VendorID}" />
+            <Text text="VendorName: {JSONModel>/SelectedProduct/Vendor/VendorName}" />           
+            <Text text="Vendor Address : {JSONModel>/SelectedProduct/Vendor/VendorAddress}" />
+            <Text text="GST NO. : {JSONModel>/SelectedProduct/Vendor/GSTIN}" />            
+             <Text text="Vendor Contact: {JSONModel>/SelectedProduct/Vendor/Contact}" />
+        </VBox>
+
+    </Popover>
+</core:FragmentDefinition>

@@ -1,0 +1,232 @@
+{
+  "Products": [
+    {
+      "ProductID": "P001",
+      "ItemNo": "10",
+      "Name": "Milk",
+      "Category": "Dairy",
+      "Description": "Fresh cow milk",
+      "Price": "40",
+      "Currency": "INR",
+      "Vendor": {
+        "VendorID": "V001",
+        "VendorName": "Amul Dairy",
+        "VendorAddress": "Anand, Gujarat",
+        "GSTIN": "24AAAAA0000A1Z5",
+        "Contact": "1800-200-200"
+      }
+    },
+    {
+      "ProductID": "P002",
+      "ItemNo": "20",
+      "Name": "Bread",
+      "Category": "Bakery",
+      "Description": "Whole wheat bread",
+      "Price": "35",
+      "Currency": "INR",
+      "Vendor": {
+        "VendorID": "V002",
+        "VendorName": "Britannia Industries",
+        "VendorAddress": "Bengaluru, Karnataka",
+        "GSTIN": "29BBBBB1111B2Z8",
+        "Contact": "080-1234-5678"
+      }
+    },
+    {
+      "ProductID": "P003",
+      "ItemNo": "30",
+      "Name": "Olive Oil",
+      "Category": "Grocery",
+      "Description": "Extra virgin olive oil",
+      "Price": "500",
+      "Currency": "INR",
+      "Vendor": {
+        "VendorID": "V003",
+        "VendorName": "Figaro Foods",
+        "VendorAddress": "Mumbai, Maharashtra",
+        "GSTIN": "27CCCCC2222C3Z7",
+        "Contact": "022-5555-1111"
+      }
+    },
+    {
+      "ProductID": "P004",
+      "ItemNo": "40",
+      "Name": "Rice",
+      "Category": "Grocery",
+      "Description": "Basmati rice",
+      "Price": "90",
+      "Currency": "INR",
+      "Vendor": {
+        "VendorID": "V004",
+        "VendorName": "India Gate Rice Mills",
+        "VendorAddress": "Delhi",
+        "GSTIN": "07DDDDD3333D4Z9",
+        "Contact": "011-6677-8899"
+      }
+    },
+    {
+      "ProductID": "P005",
+      "ItemNo": "50",
+      "Name": "Sugar",
+      "Category": "Grocery",
+      "Description": "Refined sugar",
+      "Price": "45",
+      "Currency": "INR",
+      "Vendor": {
+        "VendorID": "V005",
+        "VendorName": "Madhur Sugar",
+        "VendorAddress": "Pune, Maharashtra",
+        "GSTIN": "27EEEEE4444E5Z4",
+        "Contact": "020-7788-4455"
+      }
+    },
+    {
+      "ProductID": "P006",
+      "ItemNo": "60",
+      "Name": "Eggs",
+      "Category": "Dairy",
+      "Description": "Farm fresh eggs",
+      "Price": "6",
+      "Currency": "INR",
+       "Vendor": {
+        "VendorID": "V006",
+        "VendorName": "Farm Fresh Poultry",
+        "VendorAddress": "Nashik, Maharashtra",
+        "GSTIN": "27FFFFF5555F6Z3",
+        "Contact": "0253-123-456"
+      }
+    },
+    {
+      "ProductID": "P007",
+      "ItemNo": "70",
+      "Name": "Chicken",
+      "Category": "Meat",
+      "Description": "Fresh chicken",
+      "Price": "180",
+      "Currency": "INR",
+      "Vendor": {
+        "VendorID": "V007",
+        "VendorName": "FreshMeat Co",
+        "VendorAddress": "Hyderabad, Telangana",
+        "GSTIN": "36GGGGG6666G7Z6",
+        "Contact": "040-8877-1122"
+      }
+    },
+    {
+      "ProductID": "P008",
+      "ItemNo": "80",
+      "Name": "Butter",
+      "Category": "Dairy",
+      "Description": "Salted butter",
+      "Price": "55",
+      "Currency": "INR",
+      "Vendor": {
+        "VendorID": "V008",
+        "VendorName": "Amul Dairy",
+        "VendorAddress": "Anand, Gujarat",
+        "GSTIN": "24AAAAA0000A1Z5",
+        "Contact": "1800-200-200"
+      }
+    },
+    {
+      "ProductID": "P009",
+      "ItemNo": "90",
+      "Name": "Tea Powder",
+      "Category": "Grocery",
+      "Description": "Premium tea powder",
+      "Price": "250",
+      "Currency": "INR",
+      "Vendor": {
+        "VendorID": "V009",
+        "VendorName": "Tata Tea Ltd",
+        "VendorAddress": "Kolkata, West Bengal",
+        "GSTIN": "19HHHHH7777H8Z1",
+        "Contact": "033-4455-6677"
+      }
+    },
+    {
+      "ProductID": "P010",
+      "ItemNo": "100",
+      "Name": "Coffee",
+      "Category": "Grocery",
+      "Description": "Instant coffee",
+      "Price": "300",
+      "Currency": "INR",
+       "Vendor": {
+        "VendorID": "V010",
+        "VendorName": "Nescafé India",
+        "VendorAddress": "Gurgaon, Haryana",
+        "GSTIN": "06IIIII8888I9Z2",
+        "Contact": "0124-4455-7788"
+      }
+    }
+  ],
+
+  "Orders": [
+    {
+      "OrderID": "O5001",
+      "OrderDate": "10.01.2025",
+      "OrderBy": "Reliance Retail",
+      "OrderStatus": "Open",
+      "DeliveryStatus" : "Planned",
+      "Rating" : "4",
+      "Items": [
+        { "ProductID": "P001", "Quantity": 20 },
+        { "ProductID": "P004", "Quantity": 5 },
+        { "ProductID": "P006", "Quantity": 12 }
+      ]
+    },
+    {
+      "OrderID": "O5002",
+      "OrderDate": "15.01.2025",
+      "OrderBy": "BigBasket",
+      "OrderStatus": "Open",
+      "DeliveryStatus" : "Shipped",
+      "Rating" : "4.5",
+      "Items": [
+        { "ProductID": "P001", "Quantity": 35 },
+        { "ProductID": "P002", "Quantity": 10 },
+        { "ProductID": "P010", "Quantity": 8 }
+      ]
+    },
+    {
+      "OrderID": "O5003",
+      "OrderDate": "20.02.2025",
+      "OrderBy": "DMart",
+      "OrderStatus": "Completed",
+      "DeliveryStatus" : "Delivered",
+      "Rating" : "5",
+      "Items": [
+        { "ProductID": "P002", "Quantity": 14 },
+        { "ProductID": "P008", "Quantity": 7 },
+        { "ProductID": "P009", "Quantity": 12 }
+      ]
+    },
+    {
+      "OrderID": "O5004",
+      "OrderDate": "06.04.2025",
+      "OrderBy": "Spencers",
+      "OrderStatus": "Completed",
+      "DeliveryStatus" : "Delivered",
+      "Rating" : "3.5",
+      "Items": [
+        { "ProductID": "P004", "Quantity": 25 },
+        { "ProductID": "P006", "Quantity": 30 },
+        { "ProductID": "P007", "Quantity": 3 }
+      ]
+    },
+    {
+      "OrderID": "O5005",
+      "OrderDate": "05.05.2025",
+      "OrderBy": "Metro Cash",
+      "OrderStatus": "Cancelled",
+      "DeliveryStatus" : "Not Delivered",
+      "Rating" : "4",
+      "Items": [
+        { "ProductID": "P010", "Quantity": 10 },
+        { "ProductID": "P003", "Quantity": 4 },
+        { "ProductID": "P005", "Quantity": 20 }
+      ]
+    }
+  ]
+}
