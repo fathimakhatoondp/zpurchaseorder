@@ -33,4 +33,10 @@ An SAP Fiori application.
 
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
+## Application Output
 
+### Master Detail Page View1
+![MDP](docs/screenshots/Master Detail - Product- Order(s).png)
+
+### Object Page View 2
+![ObjectPage](docs/screenshots/Object Page - Order overall details.png)
