@@ -35,8 +35,11 @@ An SAP Fiori application.
 
 ## Application Output
 
-### Master Detail Page View1
-![MDP](docs/output_screens/Master Detail - Product- Order(s).png)
+### Master Detail Page View
+[![MDP](docs/output_screens/master-detail-product-orders.png)]
+(docs/output_screens/master-detail-product-orders.png)
 
-### Object Page View 2
-![ObjectPage](docs/output_screens/Object Page - Order overall details.png)
+### Object Page View
+[![ObjectPage](docs/output_screens/object-page-order-details.png)]
+(docs/output_screens/object-page-order-details.png)
+
